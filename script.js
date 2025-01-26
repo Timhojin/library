@@ -31,7 +31,6 @@ document.querySelector('#submit').addEventListener('click', function() {
 
 function render() {
     const table = document.querySelector('#myTable');
-    // Clear existing rows except the header
     table.innerHTML = `
         <tr>
             <th>Title</th>
@@ -54,9 +53,9 @@ function render() {
         author.textContent = book.author;
         pages.textContent = book.pages;
         read.innerHTML = `<button onclick="changeStatus(${index})">${book.read}</button>`;
-        read.style = 'text-align: center;';
+        read.style = 'text-align: center; width: 100px;';
         remove.innerHTML = `<button onclick="removeBook(${index})">Remove</button>`;
-        remove.style = 'text-align: center;';	
+        remove.style = 'text-align: center; width: 100px;';	
     });
 }
 
